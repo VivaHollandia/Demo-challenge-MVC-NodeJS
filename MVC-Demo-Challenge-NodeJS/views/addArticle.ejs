@@ -1,0 +1,19 @@
+
+<%- include('./common/header.ejs') %>
+
+    <h1>Add Article</h1>    
+    <form action="/addArticle" method="POST">
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Title</label>
+            <input type="text" name="title" class="form-control" required id="exampleFormControlInput1" >
+            <p><%= error ? error.errTitle : "" %></p>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Article</label>
+            <input type="text" name="article" required class="form-control" id="exampleFormControlInput1" >
+            <p><%= error ? error.errArticle : ""  %></p>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</body>
+</html>

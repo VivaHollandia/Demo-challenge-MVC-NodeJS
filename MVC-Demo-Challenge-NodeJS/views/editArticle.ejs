@@ -1,0 +1,14 @@
+<%- include('./common/header.ejs') %>
+
+<h1>Edit Article</h1>    
+<form action=<%=  "/editArticle/" + result.id %> method="POST">
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Title</label>
+        <input type="text" value=" <%= result.title %> " name="title" class="form-control" required id="exampleFormControlInput1" >
+    </div>
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">Article</label>
+        <input type="text" value=" <%= result.article %> " name="article" required class="form-control" id="exampleFormControlInput1" >
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

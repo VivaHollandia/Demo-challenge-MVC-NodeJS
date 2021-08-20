@@ -1,0 +1,11 @@
+<%- include('./common/header.ejs')  %>
+<h1>SINGLE ARTICLE</h1>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title"><%= val.title %></h5>
+        <p class="card-text"> <%= val.article %></p>
+        <a href= <%= "/editArticle/" + val._id %> class="btn btn-info">Edit</a> 
+        <a href= <%= "/delete/" +  val._id %>  class="btn btn-danger">Delete</a>
+    </div>
+</div>
+<script src="/path/to/date-and-time.min.js"></script>
